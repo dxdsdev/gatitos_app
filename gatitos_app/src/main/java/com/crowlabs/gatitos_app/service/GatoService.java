@@ -111,7 +111,6 @@ public class GatoService {
     public static void verFavoritos() throws IOException {
 
         Gato gato = new Gato();
-
         OkHttpClient client = new OkHttpClient();//.newBuilder().build();
         Request request = new Request.Builder()
                 .url("https://api.thecatapi.com/v1/favourites")
@@ -190,7 +189,7 @@ public class GatoService {
             Response response = client.newCall(request).execute();
         } catch (Exception e) {
         }
-
+       
     }
 
     public static ImageIcon obtenerImagen(String urlimg) throws IOException {
