@@ -18,7 +18,7 @@ public class Inicio {
     public static void main(String[] args) throws IOException {
 
         int option_menu = -1;
-        String[] botones = {" 1. Ver Gatos", " 2. Salir"};
+        String[] botones = {" 1. Ver Gatos", " 2. Ver Favoritos"," 3. Salir"};
 
         do {
             String opcion = (String) JOptionPane.showInputDialog(null, "Gatitos Java", "Menu Principal", JOptionPane.INFORMATION_MESSAGE, null, botones, botones[0]);
@@ -33,6 +33,9 @@ public class Inicio {
             switch (option_menu) {
                 case 0:
                     GatoService.verGatos();
+                    break;
+                case 1:
+                    GatoService.verFavoritos();
                     break;
                 default:
                     break;
